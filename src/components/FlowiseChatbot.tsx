@@ -50,6 +50,7 @@ const FlowiseChatbot = () => {
           ],
           starterPromptFontSize: 13,
           clearChatOnReload: false,
+          showClearButton: true,
           renderHTML: true,
           botMessage: {
             backgroundColor: "#1a2030",
