@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
 
 const barData = [
   { name: "Audio", jobs: 420 },
@@ -92,22 +92,18 @@ const StatsSection = () => {
             className="card-surface rounded-lg p-6"
           >
             <h3 className="font-heading text-xl uppercase text-foreground mb-6">Service Demand Breakdown</h3>
-            <ResponsiveContainer width="100%" height={320}>
+            <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
                   data={pieData}
                   cx="50%"
-                  cy="50%"
-                  outerRadius={80}
-                  innerRadius={40}
+                  cy="45%"
+                  outerRadius={85}
+                  innerRadius={45}
                   dataKey="value"
-                  label={({ name, percent, x, y }) => (
-                    <text x={x} y={y} fill="hsl(210, 20%, 92%)" fontSize={12} textAnchor="middle" dominantBaseline="central">
-                      {`${name} ${(percent * 100).toFixed(0)}%`}
-                    </text>
-                  )}
-                  labelLine={{ stroke: "hsl(215, 15%, 35%)", strokeWidth: 1 }}
-                  paddingAngle={2}
+                  label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
+                  labelLine={false}
+                  paddingAngle={3}
                 >
                   {pieData.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -115,6 +111,15 @@ const StatsSection = () => {
                 </Pie>
                 <Tooltip
                   contentStyle={{ backgroundColor: "hsl(220, 18%, 12%)", border: "1px solid hsl(220, 15%, 18%)", borderRadius: 8, color: "hsl(210, 20%, 92%)" }}
+                  formatter={(value: number) => [`${value}%`, ""]}
+                />
+                <Legend
+                  verticalAlign="bottom"
+                  align="center"
+                  iconType="circle"
+                  iconSize={10}
+                  wrapperStyle={{ paddingTop: 16, fontSize: 13, color: "hsl(210, 20%, 92%)" }}
+                  formatter={(value: string) => <span style={{ color: "hsl(210, 20%, 82%)", marginRight: 12 }}>{value}</span>}
                 />
               </PieChart>
             </ResponsiveContainer>
