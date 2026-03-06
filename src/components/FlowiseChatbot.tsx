@@ -79,12 +79,6 @@ const FlowiseChatbot = () => {
           dateTimeToggle: {
             date: true,
             time: true,
-          },
-          footer: {
-              textColor: '#6b7280',
-              text: 'Powered by',
-              company: 'ACT Audio',
-              companyLink: 'https://www.actaudio.com'
           }
         },
       }}
