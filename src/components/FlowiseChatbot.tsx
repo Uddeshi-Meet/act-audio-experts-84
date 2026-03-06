@@ -9,6 +9,9 @@ const FlowiseChatbot = () => {
     <FullPageChat
       chatflowid="437463b0-8e07-44a9-91a4-d21ccadc3d15"
       apiHost="https://cloud.flowiseai.com"
+      chatflowConfig={{
+        leads: true,
+      }}
       theme={{
         button: {
           backgroundColor: "#3B81F6",
