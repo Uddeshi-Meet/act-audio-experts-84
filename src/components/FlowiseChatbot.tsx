@@ -32,7 +32,7 @@ const FlowiseChatbot = () => {
         },
         chatWindow: {
           showTitle: true,
-          showAgentMessages: true,
+          showAgentMessages: false,
           title: "ACT Audio Assistant",
           titleAvatarSrc: chatbotIcon,
           welcomeMessage:
@@ -78,13 +78,7 @@ const FlowiseChatbot = () => {
           dateTimeToggle: {
             date: true,
             time: true,
-          },
-          footer: {
-            textColor: "#6b7280",
-            text: "Powered by",
-            company: "ACT Audio",
-            companyLink: "https://www.actaudio.com",
-          },
+          }
         },
       }}
     />
