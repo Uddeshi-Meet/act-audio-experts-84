@@ -6,7 +6,6 @@ import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import FlowiseChatbot from "@/components/FlowiseChatbot";
 
 const Index = () => {
   return (
@@ -19,7 +18,6 @@ const Index = () => {
       <TestimonialsSection />
       <ContactSection />
       <Footer />
-      <FlowiseChatbot />
     </div>
   );
 };
