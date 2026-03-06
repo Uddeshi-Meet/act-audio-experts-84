@@ -1,112 +1,115 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ACT Audio | Custom Car Audio &amp; Vehicle Electronics | Vernon, CT</title>
-    <meta name="description" content="ACT Audio in Vernon, CT offers custom car audio, window tinting, paint protection film, remote start, and vehicle safety upgrades. Certified technicians since 2000.">
-    <meta name="author" content="ACT Audio, Inc." />
 
-    
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/J0h0tK4PgqhJfBYqxx1Yp2R59jH2/social-images/social-1772785423431-Screenshot_2026-03-05_185106.webp">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>ACT Audio | Custom Car Audio & Vehicle Electronics | Vernon, CT</title>
+  <meta name="description"
+    content="ACT Audio in Vernon, CT offers custom car audio, window tinting, paint protection film, remote start, and vehicle safety upgrades. Certified technicians since 2000." />
+  <meta name="author" content="ACT Audio, Inc." />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/J0h0tK4PgqhJfBYqxx1Yp2R59jH2/social-images/social-1772785423431-Screenshot_2026-03-05_185106.webp">
-    <meta property="og:title" content="ACT Audio | Custom Car Audio &amp; Vehicle Electronics | Vernon, CT">
-  <meta name="twitter:title" content="ACT Audio | Custom Car Audio &amp; Vehicle Electronics | Vernon, CT">
-  <meta property="og:description" content="ACT Audio in Vernon, CT offers custom car audio, window tinting, paint protection film, remote start, and vehicle safety upgrades. Certified technicians since 2000.">
-  <meta name="twitter:description" content="ACT Audio in Vernon, CT offers custom car audio, window tinting, paint protection film, remote start, and vehicle safety upgrades. Certified technicians since 2000.">
+  <meta property="og:title" content="ACT Audio | Custom Car Audio & Vehicle Electronics" />
+  <meta property="og:description"
+    content="Custom car audio, window tinting, PPF, remote start & more in Vernon, CT. Certified technicians since 2000." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/favicon.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/favicon.png" />
 </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script type="module">
-      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-      Chatbot.init({
-        chatflowid: "437463b0-8e07-44a9-91a4-d21ccadc3d15",
-        apiHost: "https://cloud.flowiseai.com",
-        theme: {
-          button: {
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script type="module">
+    // Pin the embed version to avoid breaking changes in Flowise's widget API.
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed@3.0.5/dist/web.js"
+    Chatbot.init({
+      chatflowid: "437463b0-8e07-44a9-91a4-d21ccadc3d15",
+      apiHost: "https://cloud.flowiseai.com",
+      theme: {
+        button: {
+          backgroundColor: '#d4772c',
+          right: 20,
+          bottom: 20,
+          size: 56,
+          dragAndDrop: true,
+          iconColor: 'white',
+          customIconSrc: '/images/chatbot-icon.png',
+          autoWindowOpen: {
+            autoOpen: false,
+            openDelay: 2,
+            autoOpenOnMobile: false
+          }
+        },
+        tooltip: {
+          showTooltip: true,
+          tooltipMessage: 'Hi! Need help with your vehicle? 👋',
+          tooltipBackgroundColor: '#1a1f2e',
+          tooltipTextColor: 'white',
+          tooltipFontSize: 14
+        },
+        chatWindow: {
+          showTitle: true,
+          showAgentMessages: false,
+          title: 'ACT Audio Assistant',
+          titleAvatarSrc: '/images/chatbot-icon.png',
+          welcomeMessage: 'Hey! Welcome to ACT Audio. I can help you with car audio, window tinting, PPF, remote start, safety cameras, keys, and more. What are you looking to upgrade?',
+          errorMessage: 'Oops, something went wrong. Please call us at 860-870-7676.',
+          backgroundColor: '#0d1117',
+          height: 700,
+          width: 400,
+          fontSize: 16,
+          starterPrompts: [
+            "I want to upgrade my car audio",
+            "Tell me about window tinting",
+            "I need a remote start installed",
+            "What financing options do you have?"
+          ],
+          starterPromptFontSize: 15,
+          clearChatOnReload: false,
+          showClearButton: true,
+          renderHTML: true,
+          botMessage: {
+            backgroundColor: '#1a2030',
+            textColor: '#e0e4ed',
+            showAvatar: true,
+            avatarSrc: '/images/bot-avatar.jpg'
+          },
+          userMessage: {
             backgroundColor: '#d4772c',
-            right: 20,
-            bottom: 20,
-            size: 56,
-            dragAndDrop: true,
-            iconColor: 'white',
-            customIconSrc: '/images/chatbot-icon.png',
-            autoWindowOpen: {
-              autoOpen: false,
-              openDelay: 2,
-              autoOpenOnMobile: false
-            }
+            textColor: '#ffffff',
+            showAvatar: true,
+            avatarSrc: '/images/user-avatar.jpg'
           },
-          tooltip: {
-            showTooltip: true,
-            tooltipMessage: 'Hi! Need help with your vehicle? 👋',
-            tooltipBackgroundColor: '#1a1f2e',
-            tooltipTextColor: 'white',
-            tooltipFontSize: 14
+          textInput: {
+            placeholder: 'Ask about our services...',
+            backgroundColor: '#141a24',
+            textColor: '#e0e4ed',
+            sendButtonColor: '#d4772c',
+            autoFocus: true,
+            sendMessageSound: true,
+            receiveMessageSound: true
           },
-          chatWindow: {
-            showTitle: true,
-            showAgentMessages: false,
-            title: 'ACT Audio Assistant',
-            titleAvatarSrc: '/images/chatbot-icon.png',
-            welcomeMessage: 'Hey! Welcome to ACT Audio. I can help you with car audio, window tinting, PPF, remote start, safety cameras, keys, and more. What are you looking to upgrade?',
-            errorMessage: 'Oops, something went wrong. Please call us at 860-870-7676.',
-            backgroundColor: '#0d1117',
-            height: 700,
-            width: 400,
-            fontSize: 16,
-            starterPrompts: [
-              "I want to upgrade my car audio",
-              "Tell me about window tinting",
-              "I need a remote start installed",
-              "What financing options do you have?"
-            ],
-            starterPromptFontSize: 15,
-            clearChatOnReload: false,
-            renderHTML: true,
-            botMessage: {
-              backgroundColor: '#1a2030',
-              textColor: '#e0e4ed',
-              showAvatar: true,
-              avatarSrc: '/images/bot-avatar.jpg'
-            },
-            userMessage: {
-              backgroundColor: '#d4772c',
-              textColor: '#ffffff',
-              showAvatar: true,
-              avatarSrc: '/images/user-avatar.jpg'
-            },
-            textInput: {
-              placeholder: 'Ask about our services...',
-              backgroundColor: '#141a24',
-              textColor: '#e0e4ed',
-              sendButtonColor: '#d4772c',
-              autoFocus: true,
-              sendMessageSound: true,
-              receiveMessageSound: true
-            },
-            feedback: {
-              color: '#e0e4ed'
-            },
-            dateTimeToggle: {
-              date: true,
-              time: true
-            },
-            footer: {
-              textColor: '#6b7280',
-              text: 'Powered by',
-              company: 'ACT Audio',
-              companyLink: 'https://www.actaudio.com'
-            }
+          feedback: {
+            color: '#e0e4ed'
+          },
+          dateTimeToggle: {
+            date: true,
+            time: true
+          },
+          footer: {
+            textColor: '#6b7280',
+            text: 'Powered by',
+            company: 'ACT Audio',
+            companyLink: 'https://www.actaudio.com'
           }
         }
-      })
-    </script>
-  </body>
+      }
+    })
+  </script>
+</body>
+
 </html>
