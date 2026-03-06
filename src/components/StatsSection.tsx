@@ -92,17 +92,22 @@ const StatsSection = () => {
             className="card-surface rounded-lg p-6"
           >
             <h3 className="font-heading text-xl uppercase text-foreground mb-6">Service Demand Breakdown</h3>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={320}>
               <PieChart>
                 <Pie
                   data={pieData}
                   cx="50%"
                   cy="50%"
-                  outerRadius={100}
-                  innerRadius={50}
+                  outerRadius={80}
+                  innerRadius={40}
                   dataKey="value"
-                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                  labelLine={false}
+                  label={({ name, percent, x, y }) => (
+                    <text x={x} y={y} fill="hsl(210, 20%, 92%)" fontSize={12} textAnchor="middle" dominantBaseline="central">
+                      {`${name} ${(percent * 100).toFixed(0)}%`}
+                    </text>
+                  )}
+                  labelLine={{ stroke: "hsl(215, 15%, 35%)", strokeWidth: 1 }}
+                  paddingAngle={2}
                 >
                   {pieData.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
