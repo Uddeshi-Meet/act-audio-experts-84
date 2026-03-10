@@ -1,110 +1,67 @@
 import { FullPageChat } from "flowise-embed-react";
 
-/**
- * FlowiseChatbot component using FullPageChat configuration.
- * This component is configured with a clear button as requested.
- */
 const FlowiseChatbot = () => {
   return (
     <FullPageChat
-      chatflowid="437463b0-8e07-44a9-91a4-d21ccadc3d15"
+      chatflowid="2f48334d-c810-4815-bd3b-7c56444d561f"
       apiHost="https://cloud.flowiseai.com"
-      chatflowConfig={{
-        leads: true,
-      }}
       theme={{
-        button: {
-          backgroundColor: "#3B81F6",
-          right: 20,
-          bottom: 20,
-          size: 48,
-          dragAndDrop: true,
-          iconColor: "white",
-          customIconSrc:
-            "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
-          autoWindowOpen: {
-            autoOpen: true,
-            openDelay: 2,
-            autoOpenOnMobile: false,
-          },
-        },
-        tooltip: {
-          showTooltip: true,
-          tooltipMessage: "Hi There 👋!",
-          tooltipBackgroundColor: "black",
-          tooltipTextColor: "white",
-          tooltipFontSize: 16,
-        },
-        disclaimer: {
-          title: "Disclaimer",
-          message:
-            'By using this chatbot, you agree to the <a target="_blank" href="https://flowiseai.com/terms">Terms & Condition</a>',
-          textColor: "black",
-          buttonColor: "#3b82f6",
-          buttonText: "Start Chatting",
-          buttonTextColor: "white",
-          blurredBackgroundColor: "rgba(0, 0, 0, 0.4)",
-          backgroundColor: "white",
-        },
-        customCSS: ``,
         chatWindow: {
           showTitle: true,
           showAgentMessages: false,
-          title: "Flowise Bot",
-          titleAvatarSrc:
-            "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
-          welcomeMessage: "Hello! This is custom welcome message",
-          errorMessage: "This is a custom error message",
-          backgroundColor: "#ffffff",
-          height: "100%",
-          width: "100%",
+          title: 'ACT Audio Assistant',
+          titleAvatarSrc: '/images/chatbot-icon.png',
+          welcomeMessage: 'Hey! Welcome to ACT Audio. I can help you with car audio, window tinting, PPF, remote start, safety cameras, keys, and more. What are you looking to upgrade?',
+          errorMessage: 'Oops, something went wrong. Please call us at 860-870-7676.',
+          backgroundColor: '#0d1117',
+          height: '100%',
+          width: '100%',
           fontSize: 16,
-          starterPrompts: ["What is a bot?", "Who are you?"],
+          starterPrompts: [
+            "I want to upgrade my car audio",
+            "Tell me about window tinting",
+            "I need a remote start installed",
+            "What financing options do you have?"
+          ],
           starterPromptFontSize: 15,
           clearChatOnReload: false,
           showClearButton: true,
-          sourceDocsTitle: "Sources:",
           renderHTML: true,
           botMessage: {
-            backgroundColor: "#f7f8ff",
-            textColor: "#303235",
+            backgroundColor: '#1a2030',
+            textColor: '#e0e4ed',
             showAvatar: true,
-            avatarSrc:
-              "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+            avatarSrc: '/images/bot-avatar.jpg'
           },
           userMessage: {
-            backgroundColor: "#3B81F6",
-            textColor: "#ffffff",
+            backgroundColor: '#d4772c',
+            textColor: '#ffffff',
             showAvatar: true,
-            avatarSrc:
-              "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+            avatarSrc: '/images/user-avatar.jpg'
           },
           textInput: {
-            placeholder: "Type your question",
-            backgroundColor: "#ffffff",
-            textColor: "#303235",
-            sendButtonColor: "#3B81F6",
-            maxChars: 50,
-            maxCharsWarningMessage:
-              "You exceeded the characters limit. Please input less than 50 characters.",
+            placeholder: 'Ask about our services...',
+            backgroundColor: '#141a24',
+            textColor: '#e0e4ed',
+            sendButtonColor: '#d4772c',
             autoFocus: true,
             sendMessageSound: true,
-            receiveMessageSound: true,
+            receiveMessageSound: true
           },
           feedback: {
-            color: "#303235",
+            color: '#e0e4ed'
           },
           dateTimeToggle: {
             date: true,
-            time: true,
+            time: true
           },
           footer: {
-            textColor: "#303235",
-            text: "Powered by",
-            company: "Flowise",
-            companyLink: "https://flowiseai.com",
-          },
-        },
+            textColor: '#6b7280',
+            text: 'Powered by',
+            company: 'ACT Audio',
+            companyLink: 'https://www.actaudio.com'
+          }
+        }
       }}
     />
   );
