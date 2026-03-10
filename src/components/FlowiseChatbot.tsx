@@ -1,8 +1,11 @@
 import { FullPageChat } from "flowise-embed-react";
+import botAvatar from "@/assets/bot-avatar.jpg";
+import userAvatar from "@/assets/user-avatar.jpg";
+import chatbotIcon from "@/assets/chatbot-icon.png";
 
 /**
  * FlowiseChatbot component using FullPageChat configuration.
- * Configured with chatflowid "2f48334d-c810-4815-bd3b-7c56444d561f"
+ * Updated with local assets and removed welcome message.
  */
 const FlowiseChatbot = () => {
   return (
@@ -17,14 +20,13 @@ const FlowiseChatbot = () => {
       }}
       theme={{
         button: {
-          backgroundColor: "#3B81F6",
+          backgroundColor: "#d4772c",
           right: 20,
           bottom: 20,
-          size: 48,
+          size: 56,
           dragAndDrop: true,
           iconColor: "white",
-          customIconSrc:
-            "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+          customIconSrc: chatbotIcon,
           autoWindowOpen: {
             autoOpen: true,
             openDelay: 2,
@@ -43,7 +45,7 @@ const FlowiseChatbot = () => {
           message:
             'By using this chatbot, you agree to the <a target="_blank" href="https://flowiseai.com/terms">Terms & Condition</a>',
           textColor: "black",
-          buttonColor: "#3b82f6",
+          buttonColor: "#d4772c",
           buttonText: "Start Chatting",
           buttonTextColor: "white",
           blurredBackgroundColor: "rgba(0, 0, 0, 0.4)",
@@ -53,11 +55,9 @@ const FlowiseChatbot = () => {
         chatWindow: {
           showTitle: true,
           showAgentMessages: false,
-          title: "Flowise Bot",
-          titleAvatarSrc:
-            "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
-          welcomeMessage: "Hello! This is custom welcome message",
-          errorMessage: "This is a custom error message",
+          title: "ACT Audio Assistant",
+          titleAvatarSrc: chatbotIcon,
+          errorMessage: "Oops, something went wrong. Please call us at 860-870-7676.",
           backgroundColor: "#ffffff",
           height: "100%",
           width: "100%",
@@ -65,27 +65,26 @@ const FlowiseChatbot = () => {
           starterPrompts: ["What is a bot?", "Who are you?"],
           starterPromptFontSize: 15,
           clearChatOnReload: false,
+          showClearButton: true,
           sourceDocsTitle: "Sources:",
           renderHTML: true,
           botMessage: {
             backgroundColor: "#f7f8ff",
             textColor: "#303235",
             showAvatar: true,
-            avatarSrc:
-              "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+            avatarSrc: botAvatar,
           },
           userMessage: {
-            backgroundColor: "#3B81F6",
+            backgroundColor: "#d4772c",
             textColor: "#ffffff",
             showAvatar: true,
-            avatarSrc:
-              "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+            avatarSrc: userAvatar,
           },
           textInput: {
             placeholder: "Type your question",
             backgroundColor: "#ffffff",
             textColor: "#303235",
-            sendButtonColor: "#3B81F6",
+            sendButtonColor: "#d4772c",
             maxChars: 50,
             maxCharsWarningMessage:
               "You exceeded the characters limit. Please input less than 50 characters.",
@@ -103,8 +102,8 @@ const FlowiseChatbot = () => {
           footer: {
             textColor: "#303235",
             text: "Powered by",
-            company: "Flowise",
-            companyLink: "https://flowiseai.com",
+            company: "ACT Audio",
+            companyLink: "https://www.actaudio.com",
           },
         },
       }}
