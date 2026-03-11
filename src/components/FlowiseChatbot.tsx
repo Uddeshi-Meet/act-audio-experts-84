@@ -51,7 +51,7 @@ const FlowiseChatbot = () => {
           height: "100%",
           width: "100%",
           fontSize: 16,
-          starterPrompts: ["What is a bot?", "Who are you?"],
+          starterPrompts: ["Do you offer protection film for windshields?", "Can I add CarPlay or Android Auto to my older vehicle?", "How can I protect my new car from rock chips and scratches?"],
           starterPromptFontSize: 15,
           clearChatOnReload: false,
           showClearButton: true,
